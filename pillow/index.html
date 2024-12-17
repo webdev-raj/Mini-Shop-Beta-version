@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-full w-full bg-zinc-900 text-white font-[font1]">
+    <header class="fixed top-0 left-0 w-full flex items-center justify-between py-5 px-8 max-md:px-4">
+        <button class="py-2 px-6 border-2 rounded-full max-md:text-sm">Menu</button>
+        <h1 class="text-6xl font-semibold max-md:text-4xl">Pillows</h1>
+        <button class="py-2 px-6 border-2 rounded-full max-md:text-sm">Cart</button>
+    </header>
+    <!-- <div id="screen" class="fixed top-0 right-0 cart h-full bg-white w-3/12 translate-x-full">
+        <button id="close" class="border-2 border-black py-2 px-4 rounded-full text-black">Close</button>
+    </div> -->
+    <main class="relative h-screen w-full flex items-center justify-between flex-col">
+        <section class="flex items-center justify-center h-full w-full">
+            <iframe class="h-[80vh] w-full md:h-[70vh]" src="https://app.endlesstools.io/embed/1c1baf3a-8f5b-455e-a364-25e557639a76" frameborder=""></iframe>
+        </section>
+        <section class="flex items-center justify-center h-screen w-full flex-col px-4">
+            <h1 class="text-4xl font-semibold text-center max-md:text-3xl">Discover Your Dream Pillow</h1>
+            <p class="text-xl w-1/2 my-5 text-center leading-none max-md:w-5/6">Indulge in the ultimate sleeping experience with our premium pillow collection. Crafted with the finest materials, our pillows ensure a restful and rejuvenating sleep.</p>
+            <div class="flex flex-col items-center justify-center">
+                <h2 class="text-3xl font-semibold max-md:text-2xl">Price: $99.99 /-</h2>
+                <div class="flex items-center justify-between mt-5">
+                    <span class="text-lg font-semibold mr-3">Colors:</span>
+                    <div class="flex items-center justify-center gap-3 flex-wrap">
+                        <button id="white" class="py-2 px-4 border-2 rounded-full bg-zinc-600 text-white">White</button>
+                        <button id="gray" class="py-2 px-4 border-2 rounded-full bg-gray-700 text-white">Gray</button>
+                        <button id="blue" class="py-2 px-4 border-2 rounded-full bg-blue-500 text-white">Blue</button>
+                        <button id="green" class="py-2 px-4 border-2 rounded-full bg-green-500 text-white">Green</button>
+                        <button id="orange" class="py-2 px-4 border-2 rounded-full bg-red-500 text-white">Orange</button>
+                    </div>
+                </div>
+            </div>
+            <button id="open" class="my-5 py-2 px-6 border-2 rounded-full text-white">Add to cart</button>
+        </section>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        const white = document.querySelector("#white");
+        const gray = document.querySelector("#gray");
+        const blue = document.querySelector("#blue");
+        const green = document.querySelector("#green");
+        const orange = document.querySelector("#orange");
+        
+        orange.addEventListener("click", () => {
+            document.querySelector("iframe").src = "https://app.endlesstools.io/embed/4e6a8b1c-50b8-4eab-b574-e19ff2db9122";
+            white.classList.remove("border-2", "border-white");
+            gray.classList.remove("border-2", "border-white");
+            blue.classList.remove("border-2", "border-white");
+            green.classList.remove("border-2", "border-white");
+            orange.classList.add("border-2", "border-white");
+        });
+        
+        blue.addEventListener("click", () => {
+            document.querySelector("iframe").src = "https://app.endlesstools.io/embed/1c1baf3a-8f5b-455e-a364-25e557639a76";
+            white.classList.remove("border-2", "border-white");
+            gray.classList.remove("border-2", "border-white");
+            blue.classList.add("border-2", "border-white");
+            green.classList.remove("border-2", "border-white");
+            orange.classList.remove("border-2", "border-white");
+        });
+        green.addEventListener("click", () => {
+            document.querySelector("iframe").src = "https://app.endlesstools.io/embed/6197e43c-f6b7-496f-afac-3d0937bbb24f";
+            white.classList.remove("border-2", "border-white");
+            gray.classList.remove("border-2", "border-white");
+            blue.classList.remove("border-2", "border-white");
+            green.classList.add("border-2", "border-white");
+            orange.classList.remove("border-2", "border-white");
+        });
+        gray.addEventListener("click", () => {
+            document.querySelector("iframe").src = "https://app.endlesstools.io/embed/da8047f0-c986-41c1-b2c7-e3396be964ed";
+            white.classList.remove("border-2", "border-white");
+            gray.classList.add("border-2", "border-white");
+            blue.classList.remove("border-2", "border-white");
+            green.classList.remove("border-2", "border-white");
+            orange.classList.remove("border-2", "border-white");
+        });
+        white.addEventListener("click", () => {
+            document.querySelector("iframe").src = "https://app.endlesstools.io/embed/ff8fd153-f530-4c66-944e-9e7e3017301e";
+            white.classList.add("border-2", "border-white");
+            gray.classList.remove("border-2", "border-white");
+            blue.classList.remove("border-2", "border-white");
+            green.classList.remove("border-2", "border-white");
+            orange.classList.remove("border-2", "border-white");
+        });
+    </script>
+</body>
+</html>

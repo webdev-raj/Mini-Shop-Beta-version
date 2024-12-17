@@ -1,0 +1,14 @@
+@font-face {
+    font-family: font1;
+    src: url(./Gilroy-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
